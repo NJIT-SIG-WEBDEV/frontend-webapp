@@ -6,19 +6,19 @@ First make sure you download and install on your computer.
 
 When you install all of them run terminal or git bash and type,
 
-'node -v', and
-'git --version'
+`node -v`, and
+`git --version`
 
 If you get version numbers on both then you are good to go. If you got an exception or not found, check your installation.
 
 
-Then git clone your repo by typing 'git clone https://github.com/NJIT-SIG-WEBDEV/frontend-webapp.git'
+Then git clone your repo by typing `git clone https://github.com/NJIT-SIG-WEBDEV/frontend-webapp.git`
 
 Once you clone it you should have a frontend-webapp folder which has the app folder, test folder, Gruntfile.js etc..
 
 The web application has many modules or dependencies it needs to build and run on your computer, and these are not pushed up to the repo. Instead all of these dependencies are listed in the package.json and bower.json files. To install them you need to run two commands.
 
-'npm install' and 'bower install'
+`npm install` and `bower install`
 
 Each installation will take time, npm installation especially.
 
@@ -32,11 +32,11 @@ Yeoman generator already puts into the Gruntfile.js all the basic tasks that you
 
 so to run your web application, all you type is,
 
-'Grunt Serve'
+`Grunt Serve`
 
 Grunt will run many tasks for you and open up your web application.
 
-After running everything the last task it will run is "Watch" which watches for any changes in your project and updates them automatically.
+After running everything the last task it will run is `Watch` which watches for any changes in your project and updates them automatically.
 
 However to have your webpage automatically reload you have to get an extension on Google Chrome called "LiveReload". Idk what its called in other browsers.
 
