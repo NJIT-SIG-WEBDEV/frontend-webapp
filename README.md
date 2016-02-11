@@ -18,7 +18,7 @@ Once you clone it you should have a frontend-webapp folder which has the app fol
 
 The web application has many modules or dependencies it needs to build and run on your computer, and these are not pushed up to the repo. Instead all of these dependencies are listed in the package.json and bower.json files. To install them you need to run two commands.
 
-`npm install` and `bower install`
+`npm install` and `bower install -g` and `grunt install -g`
 
 Each installation will take time, npm installation especially.
 
