@@ -32,7 +32,7 @@ Yeoman generator already puts into the Gruntfile.js all the basic tasks that you
 
 so to run your web application, all you type is,
 
-`Grunt Serve`
+`grunt serve`
 
 Grunt will run many tasks for you and open up your web application.
 
