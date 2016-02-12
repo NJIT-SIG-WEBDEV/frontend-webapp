@@ -1,65 +1,42 @@
 # How to Install
 
+#### [Watch My Video](https://www.youtube.com/watch?v=UZULI_yxCkY)
+
 First make sure you download and install on your computer.
 * [Node JS](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
-When you install all of them run terminal or git bash and type,
+When you install all of them please run terminal or git bash in Administrator Mode and type,
 
 `node -v`, and
 `git --version`
 
-If you get version numbers on both then you are good to go. If you got an exception or not found, check your installation.
+If you get version numbers(something like v4.3.0) on both then you are good to go. If you got an exception or not found, check your installation.
 
 
 Then git clone your repo by typing `git clone https://github.com/NJIT-SIG-WEBDEV/frontend-webapp.git`
 
 Once you clone it you should have a frontend-webapp folder which has the app folder, test folder, Gruntfile.js etc..
 
-The web application has many modules or dependencies it needs to build and run on your computer, and these are not pushed up to the repo. Instead all of these dependencies are listed in the package.json and bower.json files. To install them you need to run two commands.
+The web application has many modules or dependencies it needs to build and run on your computer, and these are not pushed up to the repo. Instead all of these dependencies are listed in the package.json and bower.json files.
 
-`npm install` and `bower install -g` and `grunt install -g`
+At first please type `npm install`. Once the installation is done you should see a "node_modules" folder in your directory.
 
-Each installation will take time, npm installation especially.
+Next, please download [Grunt](http://gruntjs.com/getting-started) by typing `npm install -g grunt-cli` in your cmd.
+To confirm, type `grunt --version`. You should see something like
 
-after you run these two commands you will see two new folders in your directory. "node_modules" & "bower_components"
+`grunt-cli v0.1.13 grunt v0.4.5`.
 
-These folders hold all the modules/components of your webapp.
+Next, please download [Bower](http://bower.io/) by typing `npm install -g bower` in your cmd.
+To confirm, type `bower --version`. You should see something like '1.7.7'.
 
-**Now the good stuff**. As we said in the first meeting Grunt is a task runner, and you have to tell what task you want it to run.
+IF you are getting errors while trying to download Grunt or Bower, you might not have the right permissions. Please check this link out [https://docs.npmjs.com/getting-started/fixing-npm-permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
-Yeoman generator already puts into the Gruntfile.js all the basic tasks that you would run on any kind of web application which is awesome.
+And lastly, please type `bower install` in your command line to install all the libraries. after the installation you should see a new folder in your directory called "bower_components"
 
-so to run your web application, all you type is,
-
-`grunt serve`
-
-Grunt will run many tasks for you and open up your web application.
-
-After running everything the last task it will run is `Watch` which watches for any changes in your project and updates them automatically.
+You are Good to GO! to run your webapp type `grunt serve`. It will run all of the tasks and open up a page in `localhost:9000` with a big heading that says "'Allo, 'Allo!"
 
 However to have your webpage automatically reload you have to get an extension on Google Chrome called "LiveReload". Idk what its called in other browsers.
 
-And there you have it. You should see a simple page show up at your 'localhost:9000' address. And if you have the livereload extension running any changes you make will automatically be reflected in your webapp.
 
 If you have any questions email me at ak634@njit.edu or open up an issue on Github. Thanks
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
