@@ -1,6 +1,9 @@
 # How to Install
 
-#### [Watch My Video](https://www.youtube.com/watch?v=UZULI_yxCkY)
+### Videos
+* #### [How To Install Video](https://www.youtube.com/watch?v=UZULI_yxCkY)
+* #### [Getting Angular Setup](https://youtu.be/tHWHcszpil0)
+
 
 First make sure you download and install on your computer.
 * [Node JS](https://nodejs.org/en/)
