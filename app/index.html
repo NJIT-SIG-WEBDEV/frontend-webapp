@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html data-ng-app="app" class="no-js" lang="">
   <head>
     <meta charset="utf-8">
     <title>SIGWEB</title>
@@ -29,42 +29,12 @@
 
 
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">SIGWEB</h3>
-      </div>
+      <div ng-include="'components/header/header.html'"></div>
+      <div ui-view></div>
+      <div ui-view="jumbotron"></div>
+      <div ui-view="links"></div>
+      <div ng-include="'templates/footer.html'"></div>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4><a href="http://libsass.org/">Sass</a></h4>
-          <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
-
-
-          <h4><a href="http://getbootstrap.com/">Bootstrap</a></h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4><a href="http://modernizr.com/">Modernizr</a></h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
-        </div>
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div>
 
 
@@ -94,7 +64,14 @@
 
 
     <!-- build:js(.tmp) scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="app-routes.js"></script>
+    <script src="scripts/controllers/homeCtrl.js"></script>
+    <script src="scripts/controllers/aboutCtrl.js"></script>
+
+    <!-- Mailinglist -->
+    <script src="components/mailinglist/MailingListService.js"></script>
+    <script src="components/mailinglist/mailingListDirective.js"></script>
+
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

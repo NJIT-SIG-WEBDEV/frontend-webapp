@@ -1,0 +1,32 @@
+<h4>Search: <span><input type="text" ng-model="search"></span> </h4>
+
+<table class="table table-striped">
+  <thead>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+    <th>
+      Email Address
+    </th>
+  </thead>
+  <tbody><!--Repeats for each contact-->
+    <tr ng-repeat="contact in contacts | filter:search">
+      <td>{{contact.FirstName}}</td>
+      <td>{{contact.LastName}}</td>
+      <td>{{contact.EmailAddress}}</td>
+      <td><button type="button" class="btn btn-danger" ng-click="remove(contact)">Remove</button></td>
+    </tr>
+    <!--New contact Row-->
+    <tr id="addnew">
+      <td><input type="text" ng-model="new.FirstName"></td> <!--Data bind a "new" object to the scope-->
+      <td><input type="text" ng-model="new.LastName"></td>
+      <td><input type="text" ng-model="new.EmailAddress"></td>
+      <td><button type="button" class="btn btn-success" ng-click="save(new)">Save</button></td><!--Passes the "new" object to the $scope.save function-->
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" ng-click="add()">Add New Person</button>
